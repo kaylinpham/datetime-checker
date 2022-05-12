@@ -124,10 +124,6 @@ input[type=text]:focus {
   border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder {
-  color: #cccccc;
-}
-
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -236,4 +232,8 @@ input[type=text]:placeholder {
 
 .red {
     color: red !important;
+}
+
+.yellow {
+    color: rgb(224, 224, 0) !important;
 }

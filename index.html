@@ -14,13 +14,27 @@
         <form>
           <input
             type="text"
-            id="checker"
+            id="day"
             class="second"
-            name="checker"
-            placeholder="Enter your date"
+            name="day"
+            placeholder="Day"
+          />
+          <input
+            type="text"
+            id="month"
+            class="second"
+            name="month"
+            placeholder="Month"
+          />
+          <input
+            type="text"
+            id="year"
+            class="second"
+            name="year"
+            placeholder="Year"
           />
           <p id="message">Hi</p>
-          <input type="button" value="Check" onclick="check()" />
+          <input type="button" value="Check" onclick="checkValidDate()" />
           <input type="reset" value="Reset" />
         </form>
       </div>
