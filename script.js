@@ -13,9 +13,9 @@ function checkValidDate() {
 
   showMessage(
     `${day}/${month}/${year} is${
-      isValidDate(day, month, year) ? "" : " NOT"
+      isValidDate(Number(day), Number(month), Number(year)) ? "" : " NOT"
     } correct date time!`,
-    isValidDate(day, month, year) ? "green" : "red"
+    isValidDate(Number(day), Number(month), Number(year)) ? "green" : "red"
   );
 }
 
