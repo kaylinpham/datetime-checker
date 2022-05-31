@@ -1,5 +1,5 @@
 function isLeapYear(year) {
-  return (year % 4 === 0 && year != 1000) || year % 400 === 0;
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 }
 
 function daysInMonth(year, month) {
@@ -15,7 +15,7 @@ function daysInMonth(year, month) {
     maxDate = 31;
   } else if (month30.includes(month)) {
     maxDate = 30;
-  } else if (isLeapYear(year)) {
+  } else if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
     maxDate = 29;
   } else {
     maxDate = 28;
