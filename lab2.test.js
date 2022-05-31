@@ -22,10 +22,7 @@ const daysInMonthTestCase = [
 const checkDateTestCase = [
   { year: 2000, month: 1, day: 0, expect: false },
   { year: 2000, month: 1, day: 32, expect: false },
-  { year: 2000, month: 2, day: 15, expect: false },
-  { year: 2000, month: 2, day: 15, expect: false },
-  { year: 2000, month: 2, day: 15, expect: false },
-  { year: 2000, month: 2, day: 15, expect: false },
+  { year: 2000, month: 2, day: 15, expect: true },
   { year: 2000, month: 1, day: 0, expect: false },
   { year: 2022, month: 1, day: 31, expect: true },
   { year: 2022, month: 3, day: 31, expect: true },
