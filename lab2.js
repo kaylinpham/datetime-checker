@@ -24,6 +24,10 @@ function daysInMonth(year, month) {
 }
 
 function isValidDate(year, month, day) {
+  if (year < 1000 || year > 3000) {
+    return false;
+  }
+  
   if (month <= 0 || month > 12 || day <= 0) {
     return false;
   }
