@@ -4,7 +4,8 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "node test.js"
+    "test:unit": "node test.jest.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/kaylinpham/datetime-checker#readme",
   "dependencies": {
     "selenium-webdriver": "^4.1.2"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0"
   }
 }
