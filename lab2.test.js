@@ -139,3 +139,66 @@ describe("[CD-UTCID06]", () => {
     expect(isValidDate(3000, 1, 15)).toBeTruthy();
   });
 });
+
+//
+describe("DIM-UTCID09", () => {
+  it("should be return 30", () => {
+    expect(daysInMonth(2021, 6)).toBe(30);
+  });
+});
+
+describe("DIM-UTCID10", () => {
+  it("should be return 30", () => {
+    expect(daysInMonth(2021, 9)).toBe(30);
+  });
+});
+
+describe("DIM-UTCID11", () => {
+  it("should be return 30", () => {
+    expect(daysInMonth(2021, 11)).toBe(30);
+  });
+});
+
+describe("DIM-UTCID12", () => {
+  it("should be return 29", () => {
+    expect(daysInMonth(2400, 2)).toBe(29);
+  });
+});
+
+//---------------------
+
+describe("CD-UTCID06", () => {
+  it("should be return true", () => {
+    expect(isValidDate(1234, 1, 31)).toBe(true);
+  });
+});
+describe("CD-UTCID07", () => {
+  it("should be return true", () => {
+    expect(isValidDate(1234, 3, 31)).toBe(true);
+  });
+});
+describe("CD-UTCID08", () => {
+  it("should be return true", () => {
+    expect(isValidDate(1234, 5, 31)).toBe(true);
+  });
+});
+describe("CD-UTCID09", () => {
+  it("should be return true", () => {
+    expect(isValidDate(1234, 7, 31)).toBe(true);
+  });
+});
+describe("CD-UTCID10", () => {
+  it("should be return true", () => {
+    expect(isValidDate(1234, 8, 31)).toBe(true);
+  });
+});
+describe("CD-UTCID11", () => {
+  it("should be return true", () => {
+    expect(isValidDate(1234, 10, 31)).toBe(true);
+  });
+});
+describe("CD-UTCID12", () => {
+  it("should be return true", () => {
+    expect(isValidDate(1234, 12, 31)).toBe(true);
+  });
+});
