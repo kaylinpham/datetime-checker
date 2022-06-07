@@ -1,5 +1,5 @@
 function isLeapYear(year) {
-  return (year % 4 === 0 && year != 1000) || year % 400 === 0;
+  return (year % 4 === 0 && year % 100 != 0) || year % 400 === 0;
 }
 
 function daysInMonth(year, month) {
@@ -24,6 +24,10 @@ function daysInMonth(year, month) {
 }
 
 function isValidDate(year, month, day) {
+  if (year < 1000 || year > 3000) {
+    return false;
+  }
+  
   if (month <= 0 || month > 12 || day <= 0) {
     return false;
   }
