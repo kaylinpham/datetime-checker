@@ -1,5 +1,9 @@
 function isLeapYear(year) {
+<<<<<<< HEAD
   return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+=======
+  return (year % 4 === 0 && year % 100 != 0) || year % 400 === 0;
+>>>>>>> 8285a88f8071511f7d4725f3758a0fd57816e425
 }
 
 function daysInMonth(year, month) {
