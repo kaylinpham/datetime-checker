@@ -20,7 +20,7 @@ const inputs = [
 ];
 
 (async function run() {
-  let driver = await new Builder().forBrowser(Browser.CHROME).build();
+  let driver = await new Builder().forBrowser(Browser.FIREFOX).build();
   await driver.get("https://kaylinpham.github.io/datetime-checker/");
   try {
     for (const index in inputs) {
