@@ -41,11 +41,11 @@ function check(str, field, min, max) {
   if (!str) {
     showMessage(`Please fill in ${field}!`, "yellow");
     return false;
-  } else if (!parseInt(str) || parseInt(str) != Number(str)) {
-    showMessage(`Input data for ${field} is incorrect format!`, "red");
-    return false;
   } else if (parseInt(str) < min || parseInt(str) > max) {
     showMessage(`Input data for ${field} is out of range!`, "red");
+    return false;
+  } else if (!parseInt(str) || parseInt(str) != Number(str)) {
+    showMessage(`Input data for ${field} is incorrect format!`, "red");
     return false;
   }
 
