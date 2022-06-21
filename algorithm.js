@@ -1,7 +1,3 @@
-function isLeapYear(year) {
-  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-}
-
 function daysInMonth(year, month) {
   if (month <= 0 || month > 12) {
     return 0;

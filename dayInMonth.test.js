@@ -1,4 +1,4 @@
-const { daysInMonth } = require("./lab3");
+const { daysInMonth } = require("./algorithm");
 
 
 describe("[DIM-UTCID01]", () => {
