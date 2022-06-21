@@ -20,7 +20,7 @@ function checkValidDate() {
 }
 
 function isValidDate(day, month, year) {
-  const month31 = [1, 3, 5, 7, 8, 10, 12];
+  const month31 = [ 1, 3, 5, 7, 8, 10, 12];
   const month30 = [4, 6, 9, 11];
   let maxDate;
 
@@ -42,11 +42,11 @@ function check(str, field, min, max) {
   if (!str) {
     showMessage(`Please fill in ${field}!`, "yellow");
     return false;
-  } else if (!parseInt(str) || parseInt(str) != Number(str)) {
-    showMessage(`Input data for ${field} is incorrect format!`, "red");
-    return false;
   } else if (parseInt(str) < min || parseInt(str) > max) {
     showMessage(`Input data for ${field} is out of range!`, "red");
+    return false;
+  } else if (!parseInt(str) || parseInt(str) != Number(str)) {
+    showMessage(`Input data for ${field} is incorrect format!`, "red");
     return false;
   }
 
@@ -58,5 +58,5 @@ function showMessage(msg, color) {
   document.getElementById("message").classList.add(color);
   setTimeout(() => {
     document.getElementById("message").classList.remove(color);
-  }, 1500);
+  }, 5000);
 }
