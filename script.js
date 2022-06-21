@@ -20,7 +20,7 @@ function checkValidDate() {
 }
 
 function isValidDate(day, month, year) {
-  const month31 = [3, 5, 7, 8, 10, 12];
+  const month31 = [ 1, 3, 5, 7, 8, 10, 12];
   const month30 = [4, 6, 9, 11];
   let maxDate;
 
@@ -57,5 +57,5 @@ function showMessage(msg, color) {
   document.getElementById("message").classList.add(color);
   setTimeout(() => {
     document.getElementById("message").classList.remove(color);
-  }, 1500);
+  }, 5000);
 }
