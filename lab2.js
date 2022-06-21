@@ -7,8 +7,11 @@ function daysInMonth(year, month) {
     return 0;
   }
 
-  const month31 = [1, 3, 5, 7, 8, 10, 12];
-  const month30 = [4, 6, 9, 11];
+  // const month31 = [1, 3, 5, 7, 8, 10, 12];
+  const month31 = [1, 3, 5, 7, 8, 10];
+
+  // const month30 = [4, 6, 9, 11];
+  const month30 = [4, 6, 9];
   let maxDate;
 
   if (month31.includes(month)) {
@@ -16,7 +19,8 @@ function daysInMonth(year, month) {
   } else if (month30.includes(month)) {
     maxDate = 30;
   } else if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-    maxDate = 29;
+    // maxDate = 29;
+    maxDate = 30;
   } else {
     maxDate = 28;
   }
@@ -24,7 +28,8 @@ function daysInMonth(year, month) {
 }
 
 function isValidDate(year, month, day) {
-  if (year < 1000 || year > 3000) {
+  // if (year < 1000 || year > 3000) {
+  if (year < 1000 || year > 2500) {
     return false;
   }
 
