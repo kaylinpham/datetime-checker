@@ -1,48 +1,28 @@
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Datetime Checker</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="./script.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="wrapper">
-      <div id="formContent">
-        <h2 class="active">Datetime checker</h2>
-        <form>
-          <input
-            type="text"
-            id="day"
-            class="second"
-            name="day"
-            placeholder="Day"
-          />
-          <input
-            type="text"
-            id="month"
-            class="second"
-            name="month"
-            placeholder="Month"
-          />
-          <input
-            type="text"
-            id="year"
-            class="second"
-            name="year"
-            placeholder="Year"
-          />
-          <p id="message">Hi</p>
-          <input
-            id="check-button"
-            type="button"
-            value="Check"
-            onclick="checkValidDate()"
-          />
-          <input id="clear-button" type="reset" value="Reset" />
-        </form>
-      </div>
+        <div id="formContent">
+            <h2 class="active">Datetime checker</h2>
+            <form>
+                <input type="text" id="day" class="second" name="day" placeholder="Day" />
+                <input type="text" id="month" class="second" name="month" placeholder="Month" />
+                <input type="text" id="year" class="second" name="year" placeholder="Year" />
+                <p id="message">Hi</p>
+                <input id="check-button" type="button" value="Check" onclick="checkValidDate()" />
+                <input id="clear-button" type="reset" value="Reset" />
+            </form>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
