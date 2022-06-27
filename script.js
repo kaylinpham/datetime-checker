@@ -7,8 +7,8 @@ function checkValidDate() {
       !check(day, "Day", 1, 31) ||
       !check(month, "Month", 1, 12) ||
       // !check(year, "Year", 1000, 3000)
-      //Defect code start
-      !check(year, "Year", 1000, 2500)
+      //Defect code start 
+      !check(year, "Year", 1000, 2500) //out of range
       //Defect code end
     ) {
       return;
@@ -26,8 +26,8 @@ function checkValidDate() {
     // const month31 = [1, 3, 5, 7, 8, 10, 12];
     // const month30 = [4, 6, 9, 11];
     //Defect code start
-    const month31 = [1, 3, 5, 7, 8, 10];
-    const month30 = [4, 6, 9];
+    const month31 = [1, 3, 5, 7, 8, 10]; //missing december
+    const month30 = [4, 6, 9]; //missing november
     //Defect code end
     let maxDate;
   
@@ -47,7 +47,7 @@ function checkValidDate() {
     } else if (month30.includes(month)) {
       maxDate = 30;
     } else if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-      maxDate = 30;
+      maxDate = 30; //wrong value day in leap year
     } else {
       maxDate = 28;
     }
