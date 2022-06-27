@@ -19,8 +19,8 @@ function daysInMonth(year, month) {
         maxDate = 31;
     } else if (month30.includes(month)) {
         maxDate = 30;
-    } else if (year % 4 === 0 && year % 100 !== 0) {
-        maxDate = 29;
+    } else if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        maxDate = 30;
     } else {
         maxDate = 28;
     }
