@@ -8,7 +8,7 @@ describe("CD-UTCID00", () => {
 
 describe("CD-UTCID01", () => {
   it("should be an invalid date", () => {
-    expect(isValidDate(1234, 4, 32)).toBe(false);
+    expect(isValidDate(1234, 1, 32)).toBe(false);
   });
 });
 
@@ -32,7 +32,7 @@ describe("CD-UTCID04", () => {
 
 describe("CD-UTCID05", () => {
   it("should be a valid date", () => {
-    expect(isValidDate(3000, 1, 15)).toBe(true);
+    expect(isValidDate(3001, 1, 15)).toBe(true);
   });
 });
 
@@ -173,3 +173,15 @@ describe("CD-UTCID29", () => {
     expect(isValidDate(1234, 11, 30)).toBe(true);
   });
 });
+
+describe("CD-UTCID30", () => {
+  test("Should return: False", () => {
+    expect(isValidDate(1000, 3, 15))
+  })
+})
+
+describe("CD-UTCID31", () => {
+  test("Should return: False", () => {
+    expect(isValidDate(3000, 3, 15))
+  })
+})
