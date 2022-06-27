@@ -1,4 +1,4 @@
-const { isValidDate } = require("./lab3");
+const { isValidDate } = require("./algorithm");
 
 describe("CD-UTCID00", () => {
   it("should be an invalid date", () => {

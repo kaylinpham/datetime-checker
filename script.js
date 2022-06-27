@@ -6,7 +6,10 @@ function checkValidDate() {
   if (
     !check(day, "Day", 1, 31) ||
     !check(month, "Month", 1, 12) ||
-    !check(year, "Year", 1000, 3000)
+    // !check(year, "Year", 1000, 3000)
+    //Defect code start
+    !check(year, "Year", 1000, 2500)
+    //Defect code end
   ) {
     return;
   }
@@ -20,20 +23,35 @@ function checkValidDate() {
 }
 
 function isValidDate(day, month, year) {
-  const month31 = [ 1, 3, 5, 7, 8, 10, 12];
-  const month30 = [4, 6, 9, 11];
+  // const month31 = [1, 3, 5, 7, 8, 10, 12];
+  // const month30 = [4, 6, 9, 11];
+  //Defect code start
+  const month31 = [1, 3, 5, 7, 8, 10];
+  const month30 = [4, 6, 9];
+  //Defect code end
   let maxDate;
 
-  if (month31.includes(month)) {
+  /*if (month31.includes(month)) {
     maxDate = 31;
   } else if (month30.includes(month)) {
     maxDate = 30;
-    // } else if (year % 4 === 0 && year % 100 !== 0) {
   } else if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
     maxDate = 29;
   } else {
     maxDate = 28;
+  }*/
+
+  //Defect code start
+  if (month31.includes(month)) {
+    maxDate = 31;
+  } else if (month30.includes(month)) {
+    maxDate = 30;
+  } else if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    maxDate = 30;
+  } else {
+    maxDate = 28;
   }
+  //Defect code end
 
   return day <= maxDate;
 }
